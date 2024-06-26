@@ -1,0 +1,17 @@
+{
+  "NAME": "sanic-playground",
+  "HOST": "0.0.0.0",
+  "PORT": 8000,
+  "DEBUG": true,
+  "DATABASE": {
+    "HOST": "localhost",
+    "PORT": 5432,
+    "NAME": "db_name",
+    "USER": "db_user",
+    "PASSWORD": "db_pass"
+  },
+  "CACHE": {
+    "HOST": "localhost",
+    "PORT": 6379
+  }
+}
