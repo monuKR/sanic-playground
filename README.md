@@ -23,10 +23,3 @@ To remove a specific dependency:
 ```bash
     poetry remove <package-name>
 ```
-
-### Install Dependencies
-To install all dependencies defined in the `pyproject.toml` file:
-
-```bash
-    poetry install
-```

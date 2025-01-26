@@ -12,3 +12,6 @@ install: # Install Dependencies
 
 run: # Run service
 	python3 -m app.service
+
+run-test: # Run Test cases
+	pytest
