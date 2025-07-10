@@ -1,6 +1,6 @@
 import json
 
-from redis import Redis
+from redis.asyncio import Redis
 
 from app.config import Config
 
@@ -31,11 +31,11 @@ class Cache:
         return f"{cls._prefix}:{key}"
 
     @classmethod
-    def get(cls, key: str):
-        value = cls._cache.get(cls.get_key(key))
+    async def get(cls, key: str):
+        value = await cls._cache.get(cls.get_key(key))
         if value:
             return json.loads(value)
 
     @classmethod
-    def set(cls, key: str, value):
-        cls._cache.set(cls.get_key(key), json.dumps(value))
+    async def set(cls, key: str, value):
+        await cls._cache.set(cls.get_key(key), json.dumps(value))

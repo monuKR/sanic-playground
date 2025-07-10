@@ -1,7 +1,5 @@
 from sanic import Blueprint, Request, json
 
-from app.cache import Cache
-
 health = Blueprint("health")
 
 
